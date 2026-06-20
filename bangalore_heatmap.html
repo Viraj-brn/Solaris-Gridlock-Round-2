@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Congestion Intelligence Engine — Heatmap</title>
+
+    <!--
+        =====================================================================
+        MAPPLS (MapMyIndia) API KEY
+        =====================================================================
+        Replace YOUR_API_KEY_HERE with your actual Mappls access token.
+        Get one at: https://auth.mappls.com/console/
+        =====================================================================
+    -->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Heatmap Plugin -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+        :root {
+            --asphalt:        #14181C;
+            --panel:           #1C2128;
+            --panel-raised:    #232932;
+            --hairline:        #313944;
+            --lane-white:      #E8E6E1;
+            --lane-white-dim:  #9CA3AE;
+            --signal-amber:    #F2A900;
+            --signal-amber-dim:#8A6217;
+            --violation-red:   #D34B3E;
+            --ok-teal:         #3DA88C;
+            --mono: 'JetBrains Mono', monospace;
+            --display: 'Space Grotesk', sans-serif;
+            --body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body);
+            background: var(--asphalt);
+            color: var(--lane-white);
+            overflow: hidden;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -0.01em; }
+
+        /* ============ TOP HEADER BAR ============ */
+        .board-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--asphalt);
+            border-bottom: 1px solid var(--hairline);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .brand { display: flex; align-items: center; gap: 14px; }
+        .brand-mark {
+            font-size: 28px;
+            color: var(--signal-amber);
+            line-height: 1;
+        }
+        .brand-text h1 { font-size: 20px; font-weight: 700; color: var(--lane-white); }
+        .brand-sub { margin: 2px 0 0; color: var(--lane-white-dim); font-size: 12px; font-family: var(--mono); }
+
+        .ticker-strip {
+            display: flex;
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .ticker-item {
+            background: var(--panel);
+            padding: 8px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .ticker-num {
+            font-family: var(--mono);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--signal-amber);
+            line-height: 1.1;
+        }
+        .ticker-label {
+            font-size: 10px;
+            color: var(--lane-white-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 2px;
+        }
+
+        /* ============ MAP CONTAINER ============ */
+        #map {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* ============ CONTROLS PANEL (Left Side) ============ */
+        .controls-panel {
+            position: fixed;
+            top: 84px;
+            left: 24px;
+            z-index: 900;
+            background: var(--panel);
+            border: 1px solid var(--hairline);
+            border-radius: 8px;
+            padding: 18px;
+            width: 280px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .controls-panel h3 {
+            font-size: 16px;
+            color: var(--lane-white);
+            margin-bottom: 14px;
+        }
+
+        .control-group {
+            margin-bottom: 14px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 11px;
+            font-family: var(--mono);
+            color: var(--lane-white-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 5px;
+        }
+
+        .control-group select {
+            width: 100%;
+            padding: 8px 10px;
+            background: var(--asphalt);
+            border: 1px solid var(--hairline);
+            border-radius: 4px;
+            color: var(--lane-white);
+            font-size: 13px;
+            font-family: var(--body);
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .control-group select:hover {
+            border-color: rgba(255, 107, 53, 0.4);
+        }
+
+        .control-group select:focus {
+            border-color: #FF6B35;
+        }
+
+        .control-group select option {
+            background: var(--panel);
+            color: var(--lane-white);
+        }
+
+        .btn-apply {
+            width: 100%;
+            padding: 10px;
+            background: var(--panel-raised);
+            border: 1px solid var(--hairline);
+            border-radius: 5px;
+            color: var(--signal-amber);
+            font-size: 13px;
+            font-family: var(--mono);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .btn-apply:hover {
+            background: var(--hairline);
+            border-color: var(--signal-amber);
+        }
+
+        /* ============ LAYER TOGGLES ============ */
+        .layer-toggles {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--lane-white-dim);
+            cursor: pointer;
+            padding: 4px 0;
+        }
+
+        .layer-toggle input[type="checkbox"] {
+            accent-color: var(--signal-amber);
+            width: 14px;
+            height: 14px;
+        }
+
+        .layer-toggle span {
+            font-weight: 500;
+        }
+
+        /* ============ LEGEND ============ */
+        .legend {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 900;
+            background: var(--panel);
+            border: 1px solid var(--hairline);
+            border-radius: 8px;
+            padding: 14px 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .legend h4 {
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--mono);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--lane-white-dim);
+            margin-bottom: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: var(--lane-white);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .legend-bar {
+            display: flex;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .legend-bar div {
+            flex: 1;
+        }
+
+        /* ============ ZONE INFO PANEL (Right Side) ============ */
+        .zone-panel {
+            position: fixed;
+            top: 84px;
+            right: 24px;
+            z-index: 900;
+            background: var(--panel);
+            border: 1px solid var(--hairline);
+            border-radius: 8px;
+            padding: 0;
+            width: 360px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: none;
+            scrollbar-width: thin;
+            scrollbar-color: var(--hairline) transparent;
+        }
+
+        .zone-panel.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .zone-panel-header {
+            padding: 18px;
+            border-bottom: 1px solid var(--hairline);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: var(--panel);
+            z-index: 2;
+        }
+
+        .zone-panel-header h3 {
+            font-size: 16px;
+            color: var(--lane-white);
+        }
+
+        .zone-panel-close {
+            background: var(--panel-raised);
+            border: 1px solid var(--hairline);
+            color: var(--lane-white-dim);
+            width: 28px;
+            height: 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .zone-panel-close:hover {
+            color: var(--lane-white);
+            border-color: var(--lane-white);
+        }
+
+        .zone-panel-body {
+            padding: 16px 18px;
+        }
+
+        .zone-severity-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            font-family: var(--mono);
+            letter-spacing: 0.05em;
+        }
+
+        .zone-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 14px 0;
+        }
+
+        .zone-stat {
+            background: var(--panel-raised);
+            border: 1px solid var(--hairline);
+            border-radius: 6px;
+            padding: 10px 12px;
+        }
+
+        .zone-stat-label {
+            font-size: 10px;
+            color: var(--lane-white-dim);
+            font-family: var(--mono);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .zone-stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--mono);
+            color: var(--lane-white);
+            margin-top: 2px;
+        }
+
+        .zone-stat-value.critical { color: var(--violation-red); }
+        .zone-stat-value.high { color: var(--signal-amber); }
+        .zone-stat-value.moderate { color: var(--signal-amber-dim); }
+
+        /* Vehicle composition bar */
+        .vehicle-bar-container {
+            margin: 16px 0;
+        }
+
+        .vehicle-bar-container h4 {
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--mono);
+            color: var(--lane-white-dim);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .vehicle-bar {
+            display: flex;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--hairline);
+        }
+
+        .vehicle-bar div {
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+
+        .vehicle-bar-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+        }
+
+        .vehicle-bar-label {
+            font-size: 10px;
+            font-family: var(--mono);
+            color: var(--lane-white-dim);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .vehicle-bar-label .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        /* Strategies list */
+        .strategies-section {
+            margin-top: 20px;
+        }
+
+        .strategies-section h4 {
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--mono);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--signal-amber);
+            margin-bottom: 10px;
+        }
+
+        .strategy-card {
+            background: var(--panel-raised);
+            border: 1px solid var(--hairline);
+            border-left: 3px solid var(--signal-amber);
+            border-radius: 0 6px 6px 0;
+            padding: 12px;
+            margin-bottom: 8px;
+            transition: background 0.15s;
+        }
+
+        .strategy-card:hover {
+            background: var(--hairline);
+        }
+
+        .strategy-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--lane-white);
+        }
+
+        .strategy-source {
+            font-size: 10px;
+            font-family: var(--mono);
+            color: var(--signal-amber);
+            margin-top: 2px;
+        }
+
+        .strategy-action {
+            font-size: 12px;
+            color: var(--lane-white-dim);
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        .strategy-reason {
+            font-size: 11px;
+            color: var(--lane-white-dim);
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* Playbook Accordion */
+        .strategy-card.has-playbook {
+            cursor: pointer;
+        }
+        .playbook-toggle {
+            font-size: 10px;
+            font-family: var(--mono);
+            color: var(--signal-amber);
+            font-weight: 600;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .playbook-toggle svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.2s;
+        }
+        .strategy-card.expanded .playbook-toggle svg {
+            transform: rotate(180deg);
+        }
+        .playbook-details {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--hairline);
+        }
+        .strategy-card.expanded .playbook-details {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .playbook-item {
+            margin-bottom: 8px;
+        }
+        .playbook-label {
+            font-size: 10px;
+            font-family: var(--mono);
+            color: var(--signal-amber-dim);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+        .playbook-value {
+            font-size: 12px;
+            color: var(--lane-white);
+            line-height: 1.4;
+        }
+
+        /* ============ LOADING STATE ============ */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--asphalt);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: opacity 0.5s;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--hairline);
+            border-top-color: var(--signal-amber);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 14px;
+            font-family: var(--mono);
+            color: var(--lane-white-dim);
+            font-weight: 500;
+        }
+
+        /* Custom popup styling override */
+        .leaflet-popup-content-wrapper {
+            background: var(--panel) !important;
+            color: var(--lane-white) !important;
+            border: 1px solid var(--hairline) !important;
+            border-radius: 8px !important;
+            padding: 0 !important;
+        }
+        .leaflet-popup-content {
+            margin: 10px 12px !important;
+            font-family: var(--body) !important;
+            font-size: 13px !important;
+        }
+        .leaflet-popup-tip {
+            background: var(--panel) !important;
+            border: 1px solid var(--hairline) !important;
+        }
+
+        .custom-popup {
+            min-width: 220px;
+            font-family: var(--body);
+        }
+
+        .custom-popup h4 {
+            font-size: 14px;
+            font-family: var(--display);
+            font-weight: 600;
+            color: var(--signal-amber);
+            margin-bottom: 4px;
+        }
+
+        .custom-popup p {
+            font-size: 12px;
+            color: var(--lane-white-dim);
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Initializing Congestion Intelligence Engine...</div>
+    </div>
+
+    <!-- Header -->
+    <header class="board-header">
+        <div class="header-row">
+            <div class="brand">
+                <span class="brand-mark">⛟</span>
+                <div class="brand-text">
+                    <h1>Parking Enforcement Intelligence</h1>
+                    <p class="brand-sub">Bengaluru Traffic Police &middot; Parking-Induced Congestion Module</p>
+                </div>
+            </div>
+            <div class="ticker-strip">
+                <div class="ticker-item">
+                    <span class="ticker-num" id="scenarioBadge">Sunday 10:00</span>
+                    <span class="ticker-label">Scenario Time</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-num" id="zoneCount">0</span>
+                    <span class="ticker-label">Active Zones</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-num" id="criticalCount">0</span>
+                    <span class="ticker-label">Critical Alerts</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <h3>Scenario Controls</h3>
+
+        <div class="control-group">
+            <label>Day of Week</label>
+            <select id="daySelect">
+                <option value="0">Monday</option>
+                <option value="1">Tuesday</option>
+                <option value="2">Wednesday</option>
+                <option value="3">Thursday</option>
+                <option value="4">Friday</option>
+                <option value="5">Saturday</option>
+                <option value="6" selected>Sunday</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Hour (IST)</label>
+            <select id="hourSelect">
+                <option value="0">12:00 AM</option>
+                <option value="1">1:00 AM</option>
+                <option value="2">2:00 AM</option>
+                <option value="3">3:00 AM</option>
+                <option value="4">4:00 AM</option>
+                <option value="5">5:00 AM</option>
+                <option value="6">6:00 AM</option>
+                <option value="7">7:00 AM</option>
+                <option value="8">8:00 AM</option>
+                <option value="9">9:00 AM</option>
+                <option value="10" selected>10:00 AM</option>
+                <option value="11">11:00 AM</option>
+                <option value="12">12:00 PM</option>
+                <option value="13">1:00 PM</option>
+                <option value="14">2:00 PM</option>
+                <option value="15">3:00 PM</option>
+                <option value="16">4:00 PM</option>
+                <option value="17">5:00 PM</option>
+                <option value="18">6:00 PM</option>
+                <option value="19">7:00 PM</option>
+                <option value="20">8:00 PM</option>
+                <option value="21">9:00 PM</option>
+                <option value="22">10:00 PM</option>
+                <option value="23">11:00 PM</option>
+            </select>
+        </div>
+
+        <button class="btn-apply" onclick="updateScenario()">Update Scenario</button>
+
+        <div style="margin-top: 16px;">
+            <h3>Map Layers</h3>
+            <div class="layer-toggles">
+                <label class="layer-toggle">
+                    <input type="checkbox" id="toggleHeatmap" checked onchange="toggleLayer('heatmap')">
+                    <span>Violation Heatmap</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" id="toggleMarkers" checked onchange="toggleLayer('markers')">
+                    <span>Zone Markers</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <h4>PCU Impact Severity</h4>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #FF1744;"></div>
+            <span>Critical (&gt;50 PCU)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #FF9100;"></div>
+            <span>High (25-50 PCU)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #FFEA00;"></div>
+            <span>Moderate (12.5-25 PCU)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #00E676;"></div>
+            <span>Low (&lt;12.5 PCU)</span>
+        </div>
+        <div class="legend-bar">
+            <div style="background: #00E676;"></div>
+            <div style="background: #FFEA00;"></div>
+            <div style="background: #FF9100;"></div>
+            <div style="background: #FF1744;"></div>
+        </div>
+    </div>
+
+    <!-- Zone Detail Panel -->
+    <div class="zone-panel" id="zonePanel">
+        <div class="zone-panel-header">
+            <h3 id="zonePanelTitle">Zone Details</h3>
+            <button class="zone-panel-close" onclick="closeZonePanel()">&times;</button>
+        </div>
+        <div class="zone-panel-body" id="zonePanelBody">
+        </div>
+    </div>
+
+    <script>
+        // =====================================================================
+        // GLOBAL STATE
+        // =====================================================================
+        var map;
+        var heatmapLayer = null;
+        var zoneMarkers = [];
+        var allHeatmapData = [];
+        var allZoneData = [];
+
+        var DAY_NAMES = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        var HOUR_NAMES = [
+            '12:00 AM','1:00 AM','2:00 AM','3:00 AM','4:00 AM','5:00 AM',
+            '6:00 AM','7:00 AM','8:00 AM','9:00 AM','10:00 AM','11:00 AM',
+            '12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM',
+            '6:00 PM','7:00 PM','8:00 PM','9:00 PM','10:00 PM','11:00 PM'
+        ];
+
+        // =====================================================================
+        // MAP INITIALIZATION (Mappls callback)
+        // =====================================================================
+        window.onload = function() {
+            initMap();
+        };
+
+        function initMap() {
+            map = L.map('map', {
+                center: [12.9716, 77.5946],  // Bangalore CBD (Majestic)
+                zoom: 12,
+                zoomControl: true
+            });
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            loadMapData();
+        }
+
+        // =====================================================================
+        // DATA LOADING
+        // =====================================================================
+        function loadMapData() {
+            Promise.all([
+                fetch('heatmap_points.json').then(r => r.json()),
+                fetch('zone_markers.json').then(r => r.json())
+            ]).then(function ([heatmapData, markerData]) {
+                allHeatmapData = heatmapData;
+                allZoneData = markerData;
+
+                renderHeatmap(heatmapData);
+                renderZoneMarkers(markerData);
+                updateStats(markerData);
+
+                // Hide loading
+                document.getElementById('loadingOverlay').classList.add('hidden');
+            }).catch(function (err) {
+                console.error('Error loading map data:', err);
+                document.querySelector('.loading-text').textContent =
+                    'Error loading data. Run: python generate_map_data.py';
+            });
+        }
+
+        // =====================================================================
+        // HEATMAP LAYER
+        // =====================================================================
+        function renderHeatmap(data) {
+            if (heatmapLayer) {
+                map.removeLayer(heatmapLayer);
+            }
+
+            // Downsample to max 10,000 points to prevent browser freeze
+            var step = Math.max(1, Math.floor(data.length / 10000));
+            var sampledData = [];
+            for (var i = 0; i < data.length; i += step) {
+                sampledData.push([data[i].lat, data[i].lng, 1]);
+            }
+
+            heatmapLayer = L.heatLayer(sampledData, {
+                radius: 15,
+                blur: 15,
+                maxZoom: 17,
+                max: 1.0,
+                gradient: {
+                    0.0: 'rgba(0, 230, 118, 0)',
+                    0.4: 'rgba(0, 230, 118, 0.8)',
+                    0.6: 'rgba(255, 234, 0, 0.8)',
+                    0.8: 'rgba(255, 145, 0, 0.8)',
+                    1.0: 'rgba(255, 23, 68, 1)'
+                }
+            }).addTo(map);
+        }
+
+        // =====================================================================
+        // ZONE MARKERS
+        // =====================================================================
+        function renderZoneMarkers(data) {
+            // Clear existing markers
+            zoneMarkers.forEach(function (m) {
+                map.removeLayer(m);
+            });
+            zoneMarkers = [];
+
+            data.forEach(function (zone) {
+                var size = Math.max(20, Math.min(50, zone.pcu_impact / 10));
+                var markerHtml =
+                    '<div style="' +
+                        'width:' + size + 'px;' +
+                        'height:' + size + 'px;' +
+                        'background:' + zone.color + ';' +
+                        'border-radius:50%;' +
+                        'border:2px solid rgba(255,255,255,0.5);' +
+                        'box-shadow:0 0 ' + (size/2) + 'px ' + zone.color + '60;' +
+                        'display:flex;align-items:center;justify-content:center;' +
+                        'font-size:9px;font-weight:700;color:#fff;' +
+                        'cursor:pointer;' +
+                        'font-family:Inter,sans-serif;' +
+                        'transition:transform 0.2s;' +
+                    '">' +
+                        zone.strategy_count +
+                    '</div>';
+
+                var customIcon = L.divIcon({
+                    html: markerHtml,
+                    className: '',
+                    iconSize: [size, size],
+                    iconAnchor: [size/2, size/2]
+                });
+
+                var popupContent =
+                    '<div class="custom-popup">' +
+                        '<h4 style="color:' + zone.color + ';">' + zone.zone + '</h4>' +
+                        '<p><strong>PCU Impact:</strong> ' + zone.pcu_impact + ' (' + zone.severity + ')</p>' +
+                        '<p><strong>Type:</strong> ' + zone.archetype + '</p>' +
+                        '<p><strong>Strategies:</strong> ' + zone.strategy_count + '</p>' +
+                        '<p style="font-size:10px;color:#999;margin-top:4px;">Click for full details</p>' +
+                    '</div>';
+
+                var marker = L.marker([zone.lat, zone.lng], { icon: customIcon }).addTo(map);
+                marker.bindPopup(popupContent);
+
+                // Click handler for detail panel
+                marker.on('click', function () {
+                    showZonePanel(zone);
+                });
+
+                zoneMarkers.push(marker);
+            });
+        }
+
+        // =====================================================================
+        // ZONE DETAIL PANEL
+        // =====================================================================
+        function showZonePanel(zone) {
+            var panel = document.getElementById('zonePanel');
+            var title = document.getElementById('zonePanelTitle');
+            var body = document.getElementById('zonePanelBody');
+
+            title.textContent = zone.zone;
+
+            var severityColor = zone.color;
+            var severityClass = zone.pcu_impact > 50 ? 'critical' : zone.pcu_impact > 25 ? 'high' : 'moderate';
+
+            var twPct = zone.two_wheeler_pct;
+            var autoPct = zone.auto_pct;
+            var heavyPct = zone.heavy_pct;
+            var otherPct = Math.max(0, 100 - twPct - autoPct - heavyPct);
+
+            var strategiesHtml = '';
+            zone.strategies.forEach(function (s) {
+                var pb = s.playbook;
+                var pbHtml = '';
+                if (pb) {
+                    pbHtml = 
+                        '<div class="playbook-toggle">Implementation Playbook ' +
+                            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>' +
+                        '</div>' +
+                        '<div class="playbook-details">' +
+                            '<div class="playbook-item"><div class="playbook-label">Location Context</div><div class="playbook-value">' + pb.location + '</div></div>' +
+                            '<div class="playbook-item"><div class="playbook-label">Capacity / Scale</div><div class="playbook-value">' + pb.scale + '</div></div>' +
+                            '<div class="playbook-item"><div class="playbook-label">Timing</div><div class="playbook-value">' + pb.timing + '</div></div>' +
+                            '<div class="playbook-item"><div class="playbook-label">Personnel</div><div class="playbook-value">' + pb.personnel + '</div></div>' +
+                            '<div class="playbook-item"><div class="playbook-label">Materials</div><div class="playbook-value">' + pb.materials + '</div></div>' +
+                            '<div class="playbook-item"><div class="playbook-label">Coordination</div><div class="playbook-value">' + pb.coordination + '</div></div>' +
+                        '</div>';
+                }
+
+                strategiesHtml +=
+                    '<div class="strategy-card ' + (pb ? 'has-playbook' : '') + '" onclick="this.classList.toggle(\'expanded\')">' +
+                        '<div class="strategy-name">' + s.name + '</div>' +
+                        '<div class="strategy-source">' + s.source + '</div>' +
+                        '<div class="strategy-action">' + s.action + '</div>' +
+                        '<div class="strategy-reason">' + s.reason + '</div>' +
+                        pbHtml +
+                    '</div>';
+            });
+
+            body.innerHTML =
+                '<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">' +
+                    '<span class="zone-severity-badge" style="background:' + severityColor + '20;color:' + severityColor + ';">' +
+                        zone.severity +
+                    '</span>' +
+                    '<span style="font-size:11px;color:#6b7394;">' + zone.archetype + '</span>' +
+                '</div>' +
+
+                '<div class="zone-stats-grid">' +
+                    '<div class="zone-stat">' +
+                        '<div class="zone-stat-label">PCU Impact</div>' +
+                        '<div class="zone-stat-value ' + severityClass + '">' + zone.pcu_impact + '</div>' +
+                    '</div>' +
+                    '<div class="zone-stat">' +
+                        '<div class="zone-stat-label">Strategies</div>' +
+                        '<div class="zone-stat-value">' + zone.strategy_count + '</div>' +
+                    '</div>' +
+                    '<div class="zone-stat">' +
+                        '<div class="zone-stat-label">Historical</div>' +
+                        '<div class="zone-stat-value">' + zone.historical_violations.toLocaleString() + '</div>' +
+                    '</div>' +
+                    '<div class="zone-stat">' +
+                        '<div class="zone-stat-label">Neighbor PCU</div>' +
+                        '<div class="zone-stat-value">' + zone.spatial_lag_pcu + '</div>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div class="vehicle-bar-container">' +
+                    '<h4>Vehicle Composition</h4>' +
+                    '<div class="vehicle-bar">' +
+                        '<div style="width:' + twPct + '%;background:#42A5F5;"></div>' +
+                        '<div style="width:' + autoPct + '%;background:#AB47BC;"></div>' +
+                        '<div style="width:' + heavyPct + '%;background:#EF5350;"></div>' +
+                        '<div style="width:' + otherPct + '%;background:#66BB6A;"></div>' +
+                    '</div>' +
+                    '<div class="vehicle-bar-labels">' +
+                        '<div class="vehicle-bar-label"><div class="dot" style="background:#42A5F5;"></div> 2W ' + twPct + '%</div>' +
+                        '<div class="vehicle-bar-label"><div class="dot" style="background:#AB47BC;"></div> Auto ' + autoPct + '%</div>' +
+                        '<div class="vehicle-bar-label"><div class="dot" style="background:#EF5350;"></div> Heavy ' + heavyPct + '%</div>' +
+                        '<div class="vehicle-bar-label"><div class="dot" style="background:#66BB6A;"></div> Other ' + otherPct.toFixed(1) + '%</div>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div style="margin-top:12px;font-size:11px;color:#6b7394;">' +
+                    '<span>Validation: ' + zone.validation_ratio_pct + '%</span> &bull; ' +
+                    '<span>' + zone.distance_to_cbd_km + ' km from CBD</span>' +
+                '</div>' +
+
+                '<div class="strategies-section">' +
+                    '<h4>Recommended Strategies (' + zone.strategy_count + ')</h4>' +
+                    strategiesHtml +
+                '</div>';
+
+            panel.classList.add('active');
+        }
+
+        function closeZonePanel() {
+            document.getElementById('zonePanel').classList.remove('active');
+        }
+
+        // =====================================================================
+        // SCENARIO UPDATES
+        // =====================================================================
+        function updateScenario() {
+            var day = parseInt(document.getElementById('daySelect').value);
+            var hour = parseInt(document.getElementById('hourSelect').value);
+
+            document.getElementById('scenarioBadge').textContent =
+                DAY_NAMES[day] + ' ' + HOUR_NAMES[hour] + ' IST';
+
+            var btn = document.querySelector('.controls-panel button');
+            var originalText = btn.textContent;
+            btn.textContent = "Updating...";
+            btn.disabled = true;
+
+            fetch('/api/scenario?day=' + day + '&hour=' + hour)
+                .then(res => {
+                    if (!res.ok) throw new Error("Server error");
+                    return res.json();
+                })
+                .then(data => {
+                    renderZoneMarkers(data);
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                })
+                .catch(err => {
+                    console.error("Error updating scenario:", err);
+                    alert("Failed to update scenario. Make sure you are running 'python server.py' instead of http.server.");
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
+        }
+
+        // =====================================================================
+        // LAYER TOGGLES
+        // =====================================================================
+        function toggleLayer(layer) {
+            if (layer === 'heatmap') {
+                var visible = document.getElementById('toggleHeatmap').checked;
+                if (visible) {
+                    if (!heatmapLayer) {
+                        renderHeatmap(allHeatmapData);
+                    }
+                } else {
+                    if (heatmapLayer) {
+                        map.removeLayer(heatmapLayer);
+                        heatmapLayer = null;
+                    }
+                }
+            }
+            if (layer === 'markers') {
+                var visible = document.getElementById('toggleMarkers').checked;
+                zoneMarkers.forEach(function (m) {
+                    // Toggle visibility by removing/re-adding
+                    if (!visible) {
+                        map.removeLayer(m);
+                    }
+                });
+                if (visible) {
+                    renderZoneMarkers(allZoneData);
+                }
+            }
+        }
+
+        // =====================================================================
+        // STATS
+        // =====================================================================
+        function updateStats(markers) {
+            document.getElementById('zoneCount').textContent = markers.length;
+            document.getElementById('criticalCount').textContent =
+                markers.filter(function (m) { return m.severity === 'CRITICAL'; }).length;
+        }
+    </script>
+</body>
+</html>

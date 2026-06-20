@@ -1,0 +1,34 @@
+{
+  "k": 20,
+  "feature_names": [
+    "is_festival",
+    "is_holiday",
+    "is_monday",
+    "is_tues_to_fri",
+    "is_sat_sun",
+    "is_second_saturday"
+  ],
+  "feature_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "confidence_threshold": 40.0,
+  "selection_objective": "f1",
+  "objective_reason": "F1 is the neutral baseline because no operational false-alert versus missed-hotspot cost matrix has been supplied.",
+  "training_days": 120,
+  "validation_days": 15,
+  "selected_weight_method": "equal",
+  "validation_metrics": {
+    "precision": 0.4730639730639731,
+    "recall": 0.8619631901840491,
+    "f1": 0.6108695652173913,
+    "tp": 281,
+    "fp": 313,
+    "tn": 171,
+    "fn": 45
+  }
+}

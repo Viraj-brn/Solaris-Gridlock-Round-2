@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violation Density — Bengaluru</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-app">
+<div class="app-layout">
+  
+  <header class="app-header">
+    <div style="display: flex; flex-direction: column;">
+      <div class="app-title">Violation Density — Bengaluru</div>
+      <div id="reportingWindowDisplay" style="font-size: 12px; color: var(--text-dim); margin-top: 4px; white-space: nowrap;">REPORTING WINDOW — Loading...</div>
+    </div>
+    
+    <div class="app-tabs">
+        <button class="tab-btn active" onclick="switchTab('map')">Hotspot Map</button>
+        <button class="tab-btn" onclick="switchTab('time')">Time Patterns</button>
+        <button class="tab-btn" onclick="switchTab('breakdown')">Violation & Vehicle Breakdown</button>
+        <button class="tab-btn" onclick="switchTab('leaderboard')">Zone Leaderboard</button>
+    </div>
+
+      <div class="layer-controls">
+        <button class="layer-btn active" id="btn-heatmap" onclick="toggleLayerUI('heatmap')">Heatmap</button>
+        <button class="layer-btn active" id="btn-hotspots" onclick="toggleLayerUI('markers')">Ranked Hotspots</button>
+        <button class="layer-btn active" id="btn-police" style="color:#673AB7; border-color:#673AB7;" onclick="toggleLayerUI('police')">Police Stations</button>
+        <button class="layer-btn" id="btn-predict" aria-pressed="false" style="color:var(--signal-red); border-color:var(--signal-red);" onclick="togglePrediction()">Prediction: OFF</button>
+      </div>
+  </header>
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>DAY OF WEEK</label>
+      <select id="dayOfWeekSelect">
+        <option value="ALL">ALL</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>TAG</label>
+      <select id="tagSelect">
+        <option value="ALL">ALL</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>VEHICLE</label>
+      <select id="vehicleSelect">
+        <option value="ALL">ALL</option>
+      </select>
+    </div>
+    <div class="filter-group slider-group">
+      <div class="slider-header">
+        <label>HOUR RANGE</label>
+        <span id="hourRangeDisplay">00:00 - 23:59</span>
+      </div>
+      <div id="hourSlider"></div>
+    </div>
+    <div class="filter-actions" style="display:flex; align-items:center; gap: 16px;">
+      <div class="theme-switch-wrapper" style="display:inline-flex; align-items:center; color:var(--text-dim); font-size:12px; white-space:nowrap; font-family:var(--sans);">
+        <label class="theme-switch" for="checkbox" style="display:flex; align-items:center; cursor:pointer;">
+          <input type="checkbox" id="checkbox" onchange="toggleTheme()" style="margin-right:6px;" checked />
+          <span>Dark Mode</span>
+        </label>
+      </div>
+      <div style="display:flex; gap: 8px;">
+        <button class="btn-reset" onclick="resetFilters()">Reset</button>
+        <button class="btn-apply" onclick="applyFilters()">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    
+    <!-- TAB: MAP -->
+    <div id="tab-map" class="tab-content active" style="display:flex; width:100%;">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+      <div id="map-sidebar" style="display:none; width:400px; flex-shrink:0; background:var(--panel-bg); border-left:1px solid var(--border-color); overflow-y:auto; padding:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <h2 id="sidebarZoneName" style="font-size:16px; font-weight:600; color:var(--text-main);">Zone Details</h2>
+            <button onclick="closeSidebar()" style="background:transparent; border:none; color:var(--text-dim); cursor:pointer; font-size:18px;">&times;</button>
+        </div>
+        <div id="sidebarStrategies"></div>
+      </div>
+    </div>
+
+    <!-- TAB: TIME PATTERNS -->
+    <div id="tab-time" class="tab-content" style="display:none; padding: 24px; width:100%; overflow-y:auto;">
+        <h2>Time Patterns</h2>
+        <div style="display:flex; align-items:center; width:100%; max-width:1400px; gap: 40px; margin-top: 20px;">
+            <div style="height:400px; flex-grow:1; max-width: 900px;">
+               <canvas id="timeChart"></canvas>
+            </div>
+            <div style="width:300px; height: 250px; display:flex; flex-direction:column; justify-content:center; align-items:center; background:var(--panel-bg); border:1px solid var(--border-color); border-radius:12px; padding:32px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                <div style="font-size:14px; color:var(--text-dim); text-transform:uppercase; font-family:var(--mono); margin-bottom:16px; letter-spacing: 0.05em;">Total Graph Violations</div>
+                <div id="timeTabTotalDisplay" style="font-size:56px; font-weight:700; color:var(--signal-amber); text-shadow: 0 0 20px rgba(255, 179, 0, 0.3);">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB: BREAKDOWN -->
+    <div id="tab-breakdown" class="tab-content" style="display:none; padding: 24px; width:100%; overflow-y:auto;">
+        <h2>Violation & Vehicle Breakdown</h2>
+        <div style="display:flex; gap: 24px; margin-top: 20px; flex-wrap:wrap;">
+            <div style="height:350px; width:45%; min-width:400px; background:var(--panel-bg); padding:16px; border-radius:8px; border:1px solid var(--border-color);">
+               <canvas id="vehicleChart"></canvas>
+            </div>
+            <div style="height:350px; width:45%; min-width:400px; background:var(--panel-bg); padding:16px; border-radius:8px; border:1px solid var(--border-color);">
+               <canvas id="violationChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB: LEADERBOARD -->
+    <div id="tab-leaderboard" class="tab-content" style="display:none; width:100%; background:var(--panel-bg); overflow-y:auto;">
+      <div class="panel-header">
+        <h2>Top Enforcement Priority Zones</h2>
+        <span class="zone-count" id="zoneCountDisplay">— zones detected</span>
+      </div>
+      <div class="zone-list-container" style="padding: 16px 24px;">
+          <div class="zone-list" id="zoneList" style="max-width: 800px;">
+            <!-- JS populated -->
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Zone Details Modal (for playbook) -->
+<div id="detailsModal" class="modal">
+  <div class="modal-content" id="detailsModalContent">
+    <span class="close" onclick="document.getElementById('detailsModal').style.display='none'">&times;</span>
+    <h2 id="modalZoneName">Zone Name</h2>
+    <div id="modalStrategies"></div>
+  </div>
+</div>
+
+<script src="script.js?v=3"></script>
+</body>
+</html>

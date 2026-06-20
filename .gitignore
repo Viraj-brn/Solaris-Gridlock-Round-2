@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+.venv/
+env/
+.env
+
+# Agent / IDE Specific
+.agents/
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# ML generated
+catboost_info/
+*.pkl
+*.h5
+*.hdf5
+*.joblib
+*.npy
+*.npz
+
+# Ignore all datasets and data files by default
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+
+# Exceptions for specific config/metadata small data files
+!pois.json
+!knn_model_config.json
+!evaluation_results.json
+!hotspot_classifications.json
+!time_blocks.json
+!zone_centroids.csv
+!zone_data_coverage.csv
+!violations.csv
+!calendar_feature_weights.csv
+!model_feature_importance.csv
+
+# Ignore logs
+*.log

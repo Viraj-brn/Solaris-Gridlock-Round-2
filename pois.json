@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Nexus Mall Koramangala",
+    "type": "Mall",
+    "lat": 12.9345,
+    "lng": 77.6112
+  },
+  {
+    "name": "Phoenix Marketcity",
+    "type": "Mall",
+    "lat": 12.9969,
+    "lng": 77.6961
+  },
+  {
+    "name": "Orion Mall",
+    "type": "Mall",
+    "lat": 13.0118,
+    "lng": 77.555
+  },
+  {
+    "name": "Manyata Tech Park",
+    "type": "Tech Park",
+    "lat": 13.0478,
+    "lng": 77.619
+  },
+  {
+    "name": "Bagmane Tech Park",
+    "type": "Tech Park",
+    "lat": 12.9785,
+    "lng": 77.6628
+  },
+  {
+    "name": "RMZ Ecospace",
+    "type": "Tech Park",
+    "lat": 12.9249,
+    "lng": 77.6836
+  },
+  {
+    "name": "Bishop Cotton Boys School",
+    "type": "School",
+    "lat": 12.9723,
+    "lng": 77.6015
+  },
+  {
+    "name": "St. Josephs Boys High School",
+    "type": "School",
+    "lat": 12.9734,
+    "lng": 77.6033
+  },
+  {
+    "name": "Manipal Hospital HAL",
+    "type": "Hospital",
+    "lat": 12.9592,
+    "lng": 77.6475
+  },
+  {
+    "name": "Fortis Hospital BG Road",
+    "type": "Hospital",
+    "lat": 12.8953,
+    "lng": 77.5991
+  },
+  {
+    "name": "Brigade Road",
+    "type": "Shopping Street",
+    "lat": 12.9725,
+    "lng": 77.6074
+  },
+  {
+    "name": "Commercial Street",
+    "type": "Shopping Street",
+    "lat": 12.9822,
+    "lng": 77.6083
+  },
+  {
+    "name": "Indiranagar 100ft Road",
+    "type": "Shopping Street",
+    "lat": 12.9719,
+    "lng": 77.6412
+  },
+  {
+    "name": "Lalbagh Botanical Garden",
+    "type": "Park",
+    "lat": 12.9507,
+    "lng": 77.5848
+  },
+  {
+    "name": "Cubbon Park",
+    "type": "Park",
+    "lat": 12.9779,
+    "lng": 77.5952
+  },
+  {
+    "name": "UB City",
+    "type": "Commercial Hub",
+    "lat": 12.9715,
+    "lng": 77.596
+  },
+  {
+    "name": "Kempegowda Bus Station (Majestic)",
+    "type": "Transit Hub",
+    "lat": 12.9779,
+    "lng": 77.5714
+  },
+  {
+    "name": "KSR Bengaluru Railway Station",
+    "type": "Transit Hub",
+    "lat": 12.9782,
+    "lng": 77.5694
+  },
+  {
+    "name": "Yeshwanthpur Railway Station",
+    "type": "Transit Hub",
+    "lat": 13.0232,
+    "lng": 77.5501
+  },
+  {
+    "name": "Kengeri Bus Terminal",
+    "type": "Transit Hub",
+    "lat": 12.909,
+    "lng": 77.4815
+  }
+]
