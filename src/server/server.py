@@ -14,7 +14,7 @@ PORT = 8080
 # Load aggregated data once into memory on startup
 print("Loading aggregated data into memory...")
 try:
-    aggregated = pd.read_csv('frontend/data/processed/aggregated_zone_hourly.csv')
+    aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
     print("Aggregated data loaded successfully.")
 except FileNotFoundError:
     print("Error: aggregated_zone_hourly.csv not found. Run 'python run.py --prepare' first.")
@@ -22,7 +22,7 @@ except FileNotFoundError:
 
 print("Loading raw data for dynamic heatmaps and charts...")
 try:
-    raw_df = pd.read_csv('frontend/data/processed/cleaned_parking_data.csv')
+    raw_df = pd.read_csv('data/processed/cleaned_parking_data.csv')
     raw_df['ist_datetime'] = pd.to_datetime(raw_df['ist_datetime'], format='mixed', utc=True)
     raw_df['hour'] = raw_df['ist_datetime'].dt.hour
     raw_df['day_of_week'] = raw_df['ist_datetime'].dt.dayofweek
@@ -36,7 +36,7 @@ def rebuild_pipeline():
     print("[Ingest] Simulating live data append...")
     # Append some synthetic high-volume data to violations.csv for a specific zone
     try:
-        with open('frontend/data/raw/violations.csv', 'a', encoding='utf-8') as f:
+        with open('data/raw/violations.csv', 'a', encoding='utf-8') as f:
             now_str = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
             # Add 200 synthetic violations at Madiwala to trigger a spike
             for _ in range(200):
@@ -50,7 +50,7 @@ def rebuild_pipeline():
     
     print("[Ingest] Hot-reloading aggregated dataframe...")
     try:
-        new_agg = pd.read_csv('frontend/data/processed/aggregated_zone_hourly.csv')
+        new_agg = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
         aggregated = new_agg
         print("[Ingest] Pipeline reload complete! System is updated.")
     except Exception as e:
@@ -135,7 +135,11 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         parsed_path = urllib.parse.urlparse(self.path)
         
         if parsed_path.path == '/':
-            self.path = '/dashboard.html'
+            self.path = '/frontend/dashboard.html'
+        elif parsed_path.path in ['/dashboard.html', '/script.js', '/style.css']:
+            self.path = '/frontend' + parsed_path.path
+        elif parsed_path.path == '/zone_markers.json':
+            self.path = '/frontend/data/zone_markers.json'
 
         # Endpoint to get filter options
         if parsed_path.path == '/api/filters':
@@ -171,7 +175,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             try:
                 import pandas as pd
                 try:
-                    centroids = pd.read_csv('frontend/data/processed/zone_centroids.csv')
+                    centroids = pd.read_csv('data/processed/zone_centroids.csv')
                     stations = []
                     for _, row in centroids.iterrows():
                         lat = float(row['lat_mean']) if 'lat_mean' in row else float(row['lat'])
@@ -243,7 +247,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
                     
                     import pandas as pd
                     try:
-                        centroids = pd.read_csv('frontend/data/processed/zone_centroids.csv')
+                        centroids = pd.read_csv('data/processed/zone_centroids.csv')
                     except:
                         centroids = pd.DataFrame(columns=['police_station', 'lat', 'lng'])
                         
