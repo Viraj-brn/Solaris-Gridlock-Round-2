@@ -60,15 +60,15 @@ This is a working prototype built within a hackathon timeline, not a finished pr
                                │
               ┌────────────────┼────────────────┐
               │                │                │
-   ┌──────────▼──────┐ ┌──────▼───────┐ ┌──────▼──────────┐
-   │  ML Ensemble    │ │ Calendar KNN │ │ Time Clustering  │
-   │  (LightGBM +   │ │ Predictive   │ │  (Duration +     │
-   │   CatBoost +   │ │ Engine       │ │   Burstiness)    │
-   │   XGBoost)     │ │              │ │                  │
-   └──────────┬─────┘ └──────┬───────┘ └──────┬──────────┘
-              │              │                │
-              └──────────────┼────────────────┘
-                             │
+   ┌──────────▼─────┐  ┌──────▼───────┐ ┌──────▼──────────┐
+   │  ML Ensemble   │  │ Calendar KNN │ │ Time Clustering │
+   │  (LightGBM +   │  │ Predictive   │ │  (Duration +    │
+   │   CatBoost +   │  │ Engine       │ │   Burstiness)   │
+   │   XGBoost)     │  │              │ │                 │
+   └──────────┬─────┘  └──────┬───────┘ └──────┬──────────┘
+              │               │                │
+              └───────────────┼────────────────┘
+                              │
                   ┌──────────▼──────────┐
                   │  Decision Engine    │  9 global strategies, rule-based
                   │  + LP Allocator     │  selection, implementation playbooks,
