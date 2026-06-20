@@ -8,8 +8,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.linear_model import LinearRegression
 
-from evaluate_model import TRAIN_DAYS
-from knn_core import (
+from src.modeling.evaluate_model import TRAIN_DAYS
+from src.modeling.knn_core import (
     CALENDAR_FEATURE_NAMES,
     aggregate_daily_pcu,
     generate_calendar_features,

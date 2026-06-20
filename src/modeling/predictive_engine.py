@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import json
 
-from knn_core import (
+from src.modeling.knn_core import (
     MODEL_CONFIDENCE_THRESHOLD,
     MODEL_FEATURE_WEIGHTS,
     MODEL_K,

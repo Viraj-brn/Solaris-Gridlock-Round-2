@@ -1,0 +1,380 @@
+{
+  "Adugodi": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 14,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Ashok Nagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "Banashankari": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 2,
+    "main_peak_hour": 2
+  },
+  "Banaswadi": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 15,
+    "peak_count": 4,
+    "main_peak_hour": 1
+  },
+  "Basavanagudi": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "Bellandur": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 2,
+    "main_peak_hour": 2
+  },
+  "Byatarayanapura": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 15,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "Chamarajpet": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Chikkabanavara": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Chikkajala": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 15,
+    "peak_count": 4,
+    "main_peak_hour": 1
+  },
+  "City Market": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 15,
+    "peak_count": 3,
+    "main_peak_hour": 0
+  },
+  "Cubbon Park": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Devanahalli Airport": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 3,
+    "main_peak_hour": 4
+  },
+  "Electronic City": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "HAL Old Airport": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "HSR Layout": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Halasur": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 3,
+    "main_peak_hour": 4
+  },
+  "Halasuru Gate": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "Hebbala": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 4
+  },
+  "Hennuru": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 4
+  },
+  "High ground": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "Hulimavu": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 6,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "J.P. Nagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 14,
+    "peak_count": 4,
+    "main_peak_hour": 0
+  },
+  "Jalahalli": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Jayanagara": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Jeevanbheemanagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 2,
+    "main_peak_hour": 7
+  },
+  "Jnanabharathi": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 8,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "K.G. Halli": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 5,
+    "peak_count": 2,
+    "main_peak_hour": 3
+  },
+  "K.R. Pura": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 0
+  },
+  "K.S. Layout": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Kamakshipalya": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "Kengeri": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 2,
+    "main_peak_hour": 5
+  },
+  "Kodigehalli": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 2,
+    "main_peak_hour": 3
+  },
+  "Madiwala": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "Magadi Road": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Mahadevapura": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "Malleshwaram": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 2,
+    "main_peak_hour": 6
+  },
+  "Mico Layout": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "No Police Station": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Peenya": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 9,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Pulikeshinagar(F.Town)": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 8,
+    "peak_count": 2,
+    "main_peak_hour": 3
+  },
+  "R.T. Nagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 4
+  },
+  "Rajajinagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Sadashivanagar": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Sheshadripuram": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 12,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Shivajinagar": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 10,
+    "peak_count": 2,
+    "main_peak_hour": 5
+  },
+  "Thalagattapura": {
+    "duration_class": "Medium Window",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 5,
+    "peak_count": 2,
+    "main_peak_hour": 6
+  },
+  "Upparpet": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "V.V.Puram (C.Pet)": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 16,
+    "peak_count": 4,
+    "main_peak_hour": 0
+  },
+  "Vijayanagara": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 2,
+    "main_peak_hour": 4
+  },
+  "Whitefield": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 1
+  },
+  "Wilson Garden": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 13,
+    "peak_count": 3,
+    "main_peak_hour": 3
+  },
+  "Yelahanka": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 11,
+    "peak_count": 3,
+    "main_peak_hour": 2
+  },
+  "Yeshwanthpura": {
+    "duration_class": "Long/Spread-out Hours",
+    "burst_class": "Multiple/Sporadic Peaks",
+    "active_hours_count": 14,
+    "peak_count": 2,
+    "main_peak_hour": 3
+  }
+}

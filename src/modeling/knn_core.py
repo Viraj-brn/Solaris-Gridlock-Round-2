@@ -14,7 +14,7 @@ from config import (
     PCU_DEFAULT,
     PCU_MAP,
 )
-from karnataka_calendar import (
+from src.data_processing.karnataka_calendar import (
     KARNATAKA_FESTIVALS_SORTED,
     KARNATAKA_HOLIDAYS_SORTED,
 )
@@ -29,7 +29,7 @@ CALENDAR_FEATURE_NAMES = (
     'is_second_saturday',
 )
 
-MODEL_CONFIG_PATH = Path(__file__).with_name('models/knn_model_config.json')
+MODEL_CONFIG_PATH = Path(__file__).resolve().parent.parent.parent / 'models' / 'knn_model_config.json'
 
 
 def load_model_config():

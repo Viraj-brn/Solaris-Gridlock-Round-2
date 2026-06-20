@@ -14,10 +14,10 @@ import time
 import pandas as pd
 
 from config import DATA_FILE, TOTAL_OFFICERS
-from data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
-from feature_engineer import engineer_all_features
-from model_trainer import run_training_pipeline, predict_ensemble, save_training_results
-from decision_engine import run_decision_engine
+from src.data_processing.data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
+from src.data_processing.feature_engineer import engineer_all_features
+from src.modeling.model_trainer import run_training_pipeline, predict_ensemble, save_training_results
+from src.modeling.decision_engine import run_decision_engine
 
 
 def run_full_pipeline(skip_training=False):

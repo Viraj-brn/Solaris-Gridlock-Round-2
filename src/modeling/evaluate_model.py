@@ -6,7 +6,7 @@ import warnings
 import numpy as np
 import pandas as pd
 
-from knn_core import (
+from src.modeling.knn_core import (
     DEFAULT_FEATURE_WEIGHTS,
     MODEL_K,
     aggregate_daily_pcu,

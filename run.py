@@ -13,15 +13,14 @@ Usage:
 import argparse
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 import time
 import pandas as pd
 
-from data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
-from feature_engineer import engineer_all_features
-from model_trainer import run_training_pipeline, save_training_results
-from decision_engine import run_decision_engine, DAY_NAMES
-from generate_map_data import generate_heatmap_points, generate_zone_markers, save_map_data
+from src.data_processing.data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
+from src.data_processing.feature_engineer import engineer_all_features
+from src.modeling.model_trainer import run_training_pipeline, save_training_results
+from src.modeling.decision_engine import run_decision_engine, DAY_NAMES
+from src.data_processing.generate_map_data import generate_heatmap_points, generate_zone_markers, save_map_data
 
 
 def main():
