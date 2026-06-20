@@ -22,3 +22,7 @@ six==1.17.0
 threadpoolctl==3.6.0
 tzdata==2026.2
 xgboost==3.2.0
+fastapi==0.110.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+apscheduler==3.10.4

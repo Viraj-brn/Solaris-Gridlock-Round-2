@@ -1,3 +1,7 @@
+"""
+DEPRECATED: This module uses http.server and is kept only for fallback/legacy testing.
+Please use `fastapi_server.py` for production hosting and active development.
+"""
 import http.server
 import socketserver
 import urllib.parse
