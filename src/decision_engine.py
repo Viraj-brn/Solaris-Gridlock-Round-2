@@ -571,7 +571,7 @@ def run_decision_engine(aggregated_df, hour=10, day_of_week=6):
     
     # Load time classifications
     try:
-        with open('time_blocks.json', 'r') as f:
+        with open('frontend/data/time_blocks.json', 'r') as f:
             classifications = json.load(f)
     except:
         classifications = {}
@@ -616,7 +616,7 @@ if __name__ == '__main__':
 
     try:
         # Try loading pre-computed aggregated data
-        aggregated = pd.read_csv('aggregated_zone_hourly.csv')
+        aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
         print(f"  Loaded aggregated data: {aggregated.shape}")
     except FileNotFoundError:
         # Full pipeline

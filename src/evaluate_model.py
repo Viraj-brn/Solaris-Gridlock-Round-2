@@ -20,7 +20,7 @@ VALIDATION_DAYS = 15
 
 
 # Load and aggregate daily impact data from CSV.
-def load_daily_impacts(path='cleaned_parking_data.csv'):
+def load_daily_impacts(path='data/processed/cleaned_parking_data.csv'):
     raw_df = pd.read_csv(
         path, usecols=['police_station', 'ist_date', 'vehicle_type']
     )
@@ -259,7 +259,7 @@ def run_evaluation(save_plot=True):
                 f"max={spread['max']:.3f}"
             )
 
-    result['coverage'].to_csv('zone_data_coverage.csv', index=False)
+    result['coverage'].to_csv('data/processed/zone_data_coverage.csv', index=False)
     print('\nSaved zone coverage to zone_data_coverage.csv')
 
     if save_plot:

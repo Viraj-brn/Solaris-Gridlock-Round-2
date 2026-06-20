@@ -8,7 +8,7 @@ import numpy as np
 
 
 results = json.loads(
-    Path('evaluation_results.json').read_text(encoding='utf-8')
+    Path('models/evaluation_results.json').read_text(encoding='utf-8')
 )
 daily_metrics = results['validation_daily']
 threshold = results['model_config']['confidence_threshold']

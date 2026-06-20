@@ -1,5 +1,5 @@
 
-DATA_FILE = 'dataset round2/jan to may police violation_anonymized791b166.csv'
+DATA_FILE = 'data/raw/dataset round2/jan to may police violation_anonymized791b166.csv'
 
 # PCU (Passenger Car Unit) WEIGHTS — Indian Highway Capacity Manual
 PCU_MAP = {

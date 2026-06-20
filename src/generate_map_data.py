@@ -21,7 +21,7 @@ import math
 
 # Load POIs
 try:
-    with open('pois.json', 'r') as f:
+    with open('frontend/data/pois.json', 'r') as f:
         POIS = json.load(f)
 except Exception:
     POIS = []
@@ -171,13 +171,13 @@ def generate_zone_markers(aggregated_df, hours=[10], day_of_week=6):
 def save_map_data(heatmap_points, zone_markers, output_dir='.'):
     """Save all map data as JSON files."""
     # Heatmap points
-    heatmap_path = os.path.join(output_dir, 'heatmap_points.json')
+    heatmap_path = os.path.join(output_dir, 'frontend/data/heatmap_points.json')
     with open(heatmap_path, 'w') as f:
         json.dump(heatmap_points, f)
     print(f"  Saved {len(heatmap_points):,} heatmap points -> {heatmap_path}")
 
     # Zone markers
-    markers_path = os.path.join(output_dir, 'zone_markers.json')
+    markers_path = os.path.join(output_dir, 'frontend/data/zone_markers.json')
     with open(markers_path, 'w') as f:
         json.dump(zone_markers, f, indent=2)
     print(f"  Saved {len(zone_markers)} zone markers -> {markers_path}")
@@ -201,7 +201,7 @@ if __name__ == '__main__':
     # Load aggregated data for zone markers
     print("\nLoading aggregated data for zone markers...")
     try:
-        aggregated = pd.read_csv('aggregated_zone_hourly.csv')
+        aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
     except FileNotFoundError:
         from feature_engineer import engineer_all_features
         aggregated, _, _ = engineer_all_features(df)

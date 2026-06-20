@@ -51,8 +51,8 @@ def run_full_pipeline(skip_training=False):
     aggregated, zone_centroids, adjacency_map = engineer_all_features(df)
 
     # Save intermediate results
-    aggregated.to_csv('aggregated_zone_hourly.csv', index=False)
-    zone_centroids.to_csv('zone_centroids.csv', index=False)
+    aggregated.to_csv('data/processed/aggregated_zone_hourly.csv', index=False)
+    zone_centroids.to_csv('data/processed/zone_centroids.csv', index=False)
     print(f"  Stage 2 complete in {time.time() - stage_start:.1f}s")
 
     # STAGE 3: ML MODEL TRAINING

@@ -12,6 +12,8 @@ Usage:
 
 import argparse
 import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 import time
 import pandas as pd
 
@@ -56,15 +58,15 @@ def main():
         
         aggregated, zone_centroids, adj_map = engineer_all_features(df)
         
-        aggregated.to_csv('aggregated_zone_hourly.csv', index=False)
-        zone_centroids.to_csv('zone_centroids.csv', index=False)
+        aggregated.to_csv('data/processed/aggregated_zone_hourly.csv', index=False)
+        zone_centroids.to_csv('data/processed/zone_centroids.csv', index=False)
         print("[OK] Data preparation complete. Saved to aggregated_zone_hourly.csv")
     
     # 2. TRAIN ML MODELS
     if args.all or args.train:
         print("\n> RUNNING ML MODEL TRAINING...")
         try:
-            aggregated = pd.read_csv('aggregated_zone_hourly.csv')
+            aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
         except FileNotFoundError:
             print("Error: aggregated_zone_hourly.csv not found. Please run with --prepare first.")
             sys.exit(1)
@@ -77,7 +79,7 @@ def main():
     if args.all or args.decision:
         print(f"\n> RUNNING DECISION ENGINE for {DAY_NAMES[args.day]} {args.hour}:00 IST...")
         try:
-            aggregated = pd.read_csv('aggregated_zone_hourly.csv')
+            aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
         except FileNotFoundError:
             print("Error: aggregated_zone_hourly.csv not found. Please run with --prepare first.")
             sys.exit(1)
@@ -96,7 +98,7 @@ def main():
         df = convert_utc_to_ist(df)
         
         try:
-            aggregated = pd.read_csv('aggregated_zone_hourly.csv')
+            aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
         except FileNotFoundError:
             print("Error: aggregated_zone_hourly.csv not found. Please run with --prepare first.")
             sys.exit(1)

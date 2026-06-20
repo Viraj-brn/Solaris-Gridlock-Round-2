@@ -26,7 +26,7 @@ def normalize(values):
     return 1.0 + 4.0 * ((values - low) / (high - low))
 
 
-def build_training_matrix(path='cleaned_parking_data.csv'):
+def build_training_matrix(path='data/processed/cleaned_parking_data.csv'):
     raw = pd.read_csv(
         path, usecols=['police_station', 'ist_date', 'vehicle_type']
     )
@@ -40,7 +40,7 @@ def build_training_matrix(path='cleaned_parking_data.csv'):
     return features, training['impact'].to_numpy(), train_dates
 
 
-def derive_weight_table(path='cleaned_parking_data.csv'):
+def derive_weight_table(path='data/processed/cleaned_parking_data.csv'):
     features, target, train_dates = build_training_matrix(path)
 
     random_forest = RandomForestRegressor(n_estimators=100, random_state=42)
@@ -85,7 +85,7 @@ def main():
             f'{row.linear_regression:<12.3f} | {row.mutual_information:<12.3f} | '
             f'{row.correlation:<12.3f}'
         )
-    table.to_csv('calendar_feature_weights.csv', index=False)
+    table.to_csv('data/processed/calendar_feature_weights.csv', index=False)
     print('\nSaved corrected table to calendar_feature_weights.csv')
 
 

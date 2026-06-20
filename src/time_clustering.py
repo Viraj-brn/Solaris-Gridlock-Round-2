@@ -15,7 +15,7 @@ def generate_time_blocks():
     - MULTIPLE_PEAKS: Multiple or sporadic peaks across active hours
     """
     try:
-        agg = pd.read_csv('aggregated_zone_hourly.csv')
+        agg = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
     except Exception as e:
         print("Could not read aggregated_zone_hourly.csv:", e)
         return
@@ -67,7 +67,7 @@ def generate_time_blocks():
             'peak_hour': int(hourly_vol.idxmax())
         }
 
-    with open('time_blocks.json', 'w') as f:
+    with open('frontend/data/time_blocks.json', 'w') as f:
         json.dump(time_classifications, f, indent=2)
     print("Time classifications generated in time_blocks.json")
 

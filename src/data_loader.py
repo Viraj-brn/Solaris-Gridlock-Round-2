@@ -217,7 +217,7 @@ if __name__ == '__main__':
     print_data_summary(df)
 
     # Save cleaned data for next module
-    output_path = 'cleaned_parking_data.csv'
+    output_path = 'data/processed/cleaned_parking_data.csv'
     print(f"\nSaving cleaned data to {output_path}...")
     df.to_csv(output_path, index=False)
     print("Done!")

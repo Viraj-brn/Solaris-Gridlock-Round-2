@@ -45,7 +45,7 @@ def generate_prediction(current_df, confidence_threshold=MODEL_CONFIDENCE_THRESH
     
     # Load hotspot classifications if available
     try:
-        with open('time_blocks.json', 'r') as f:
+        with open('frontend/data/time_blocks.json', 'r') as f:
             hotspot_classifications = json.load(f)
     except:
         hotspot_classifications = {}
@@ -86,7 +86,7 @@ def generate_prediction(current_df, confidence_threshold=MODEL_CONFIDENCE_THRESH
     
     # Get centroids
     try:
-        centroids = pd.read_csv('zone_centroids.csv')
+        centroids = pd.read_csv('data/processed/zone_centroids.csv')
     except:
         centroids = pd.DataFrame(columns=['police_station', 'lat_mean', 'lon_mean'])
         

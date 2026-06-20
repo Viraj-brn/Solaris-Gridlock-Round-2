@@ -29,7 +29,7 @@ CALENDAR_FEATURE_NAMES = (
     'is_second_saturday',
 )
 
-MODEL_CONFIG_PATH = Path(__file__).with_name('knn_model_config.json')
+MODEL_CONFIG_PATH = Path(__file__).with_name('models/knn_model_config.json')
 
 
 def load_model_config():

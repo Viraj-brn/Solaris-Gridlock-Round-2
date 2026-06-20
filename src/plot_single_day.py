@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 results = json.loads(
-    Path('evaluation_results.json').read_text(encoding='utf-8')
+    Path('models/evaluation_results.json').read_text(encoding='utf-8')
 )
 sweep = results['final_test_day_sweep']
 target_date = results['final_test_date']

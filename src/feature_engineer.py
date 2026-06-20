@@ -459,11 +459,11 @@ if __name__ == '__main__':
     aggregated, centroids, adj_map = engineer_all_features(df)
 
     # Save
-    output_path = 'aggregated_zone_hourly.csv'
+    output_path = 'data/processed/aggregated_zone_hourly.csv'
     print(f"\nSaving aggregated data to {output_path}...")
     aggregated.to_csv(output_path, index=False)
 
-    centroids_path = 'zone_centroids.csv'
+    centroids_path = 'data/processed/zone_centroids.csv'
     centroids.to_csv(centroids_path, index=False)
     print(f"Saved zone centroids to {centroids_path}")
 
