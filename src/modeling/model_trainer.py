@@ -453,8 +453,8 @@ def save_training_results(results, prefix='model'):
 
 # STANDALONE TEST
 if __name__ == '__main__':
-    from data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
-    from feature_engineer import engineer_all_features
+    from src.data_processing.data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
+    from src.data_processing.feature_engineer import engineer_all_features
 
     # Load and prepare data
     df = load_parking_data()

@@ -367,7 +367,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             
         if parsed_path.path == '/api/predict_tomorrow':
             try:
-                import predictive_engine
+                import src.modeling.predictive_engine as predictive_engine
                 
                 prediction_payload = predictive_engine.generate_prediction(raw_df)
                 if prediction_payload.get('status') == 'ok':

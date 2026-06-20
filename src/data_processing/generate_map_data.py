@@ -187,7 +187,7 @@ def save_map_data(heatmap_points, zone_markers, output_dir='.'):
 # STANDALONE TEST
 # =============================================================================
 if __name__ == '__main__':
-    from data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
+    from src.data_processing.data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
 
     # Load raw data for heatmap points
     print("Loading raw data for heatmap...")
@@ -203,7 +203,7 @@ if __name__ == '__main__':
     try:
         aggregated = pd.read_csv('data/processed/aggregated_zone_hourly.csv')
     except FileNotFoundError:
-        from feature_engineer import engineer_all_features
+        from src.data_processing.feature_engineer import engineer_all_features
         aggregated, _, _ = engineer_all_features(df)
 
     # Generate markers for Sunday 10 AM

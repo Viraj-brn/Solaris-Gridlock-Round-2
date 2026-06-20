@@ -620,8 +620,8 @@ if __name__ == '__main__':
         print(f"  Loaded aggregated data: {aggregated.shape}")
     except FileNotFoundError:
         # Full pipeline
-        from data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
-        from feature_engineer import engineer_all_features
+        from src.data_processing.data_loader import load_parking_data, clean_parking_data, convert_utc_to_ist
+        from src.data_processing.feature_engineer import engineer_all_features
 
         df = load_parking_data()
         df = clean_parking_data(df)
