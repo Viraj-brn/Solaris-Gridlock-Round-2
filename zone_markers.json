@@ -1,0 +1,2941 @@
+[
+  {
+    "lat": 12.981737,
+    "lng": 77.60879,
+    "zone": "Shivajinagar",
+    "archetype": "CBD_COMMERCIAL",
+    "pcu_impact": 1066.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 28.9,
+    "auto_pct": 42.5,
+    "heavy_pct": 0.5,
+    "spatial_lag_pcu": 44.7,
+    "validation_ratio_pct": 36.2,
+    "historical_violations": 28044,
+    "distance_to_cbd_km": 1.9,
+    "strategies": [
+      {
+        "name": "Activate Model Ward",
+        "source": "Vietnam (Hanoi)",
+        "action": "Zero-tolerance enforcement with full resource allocation",
+        "reason": "Historical violations (28,044) > threshold (15,000)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (42.5%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Major stand (15-20 autos capacity). Implement queue management.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.49) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (1066.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 5
+  },
+  {
+    "lat": 13.005202,
+    "lng": 77.560913,
+    "zone": "Malleshwaram",
+    "archetype": "RESIDENTIAL_COMMERCIAL",
+    "pcu_impact": 529.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 26.4,
+    "auto_pct": 22.2,
+    "heavy_pct": 0.8,
+    "spatial_lag_pcu": 43.0,
+    "validation_ratio_pct": 34.2,
+    "historical_violations": 22200,
+    "distance_to_cbd_km": 5.2,
+    "strategies": [
+      {
+        "name": "Activate Model Ward",
+        "source": "Vietnam (Hanoi)",
+        "action": "Zero-tolerance enforcement with full resource allocation",
+        "reason": "Historical violations (22,200) > threshold (15,000)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.39) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (529.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.97581,
+    "lng": 77.577711,
+    "zone": "Upparpet",
+    "archetype": "CBD_RETAIL",
+    "pcu_impact": 524.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 52.1,
+    "auto_pct": 12.9,
+    "heavy_pct": 2.6,
+    "spatial_lag_pcu": 94.5,
+    "validation_ratio_pct": 42.0,
+    "historical_violations": 34468,
+    "distance_to_cbd_km": 1.9,
+    "strategies": [
+      {
+        "name": "Activate Model Ward",
+        "source": "Vietnam (Hanoi)",
+        "action": "Zero-tolerance enforcement with full resource allocation",
+        "reason": "Historical violations (34,468) > threshold (15,000)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (52.1%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.30) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (524.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy on service roads or designated off-street pockets to avoid choking narrow main carriageways.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 5
+  },
+  {
+    "lat": 12.96399,
+    "lng": 77.577223,
+    "zone": "City Market",
+    "archetype": "TRANSIT_HUB",
+    "pcu_impact": 286.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 55.6,
+    "auto_pct": 23.6,
+    "heavy_pct": 8.9,
+    "spatial_lag_pcu": 113.7,
+    "validation_ratio_pct": 31.5,
+    "historical_violations": 17646,
+    "distance_to_cbd_km": 2.1,
+    "strategies": [
+      {
+        "name": "Activate Model Ward",
+        "source": "Vietnam (Hanoi)",
+        "action": "Zero-tolerance enforcement with full resource allocation",
+        "reason": "Historical violations (17,646) > threshold (15,000)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (55.6%) > threshold (50%)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (286.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.981334,
+    "lng": 77.543416,
+    "zone": "Vijayanagara",
+    "archetype": "MIXED_RESIDENTIAL",
+    "pcu_impact": 242.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 60.9,
+    "auto_pct": 4.1,
+    "heavy_pct": 2.0,
+    "spatial_lag_pcu": 125.2,
+    "validation_ratio_pct": 37.4,
+    "historical_violations": 14652,
+    "distance_to_cbd_km": 5.7,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (60.9%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (242.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 13.063922,
+    "lng": 77.587263,
+    "zone": "Kodigehalli",
+    "archetype": "SUBURBAN_TECH",
+    "pcu_impact": 203.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 46.3,
+    "auto_pct": 10.0,
+    "heavy_pct": 0.8,
+    "spatial_lag_pcu": 45.5,
+    "validation_ratio_pct": 27.4,
+    "historical_violations": 10916,
+    "distance_to_cbd_km": 10.3,
+    "strategies": [
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is SUBURBAN_TECH (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (203.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.964818,
+    "lng": 77.583105,
+    "zone": "Halasuru Gate",
+    "archetype": "GENERAL",
+    "pcu_impact": 185.2,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 47.6,
+    "auto_pct": 23.2,
+    "heavy_pct": 8.5,
+    "spatial_lag_pcu": 124.7,
+    "validation_ratio_pct": 36.6,
+    "historical_violations": 6294,
+    "distance_to_cbd_km": 1.5,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.22) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (185.2) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.995961,
+    "lng": 77.695049,
+    "zone": "Mahadevapura",
+    "archetype": "GENERAL",
+    "pcu_impact": 162.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 13.7,
+    "auto_pct": 48.0,
+    "heavy_pct": 4.0,
+    "spatial_lag_pcu": 160.8,
+    "validation_ratio_pct": 14.9,
+    "historical_violations": 6187,
+    "distance_to_cbd_km": 11.2,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (48.0%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Major stand (15-20 autos capacity). Implement queue management.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.56) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (162.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 13.00859,
+    "lng": 77.693788,
+    "zone": "K.R. Pura",
+    "archetype": "GENERAL",
+    "pcu_impact": 160.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 18.5,
+    "auto_pct": 18.5,
+    "heavy_pct": 8.3,
+    "spatial_lag_pcu": 162.0,
+    "validation_ratio_pct": 36.3,
+    "historical_violations": 6546,
+    "distance_to_cbd_km": 11.5,
+    "strategies": [
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (160.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.997787,
+    "lng": 77.549211,
+    "zone": "Rajajinagar",
+    "archetype": "MID_COMMERCIAL",
+    "pcu_impact": 133.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 63.3,
+    "auto_pct": 3.2,
+    "heavy_pct": 1.1,
+    "spatial_lag_pcu": 184.8,
+    "validation_ratio_pct": 42.6,
+    "historical_violations": 10998,
+    "distance_to_cbd_km": 5.7,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (63.3%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (133.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.910981,
+    "lng": 77.642725,
+    "zone": "HSR Layout",
+    "archetype": "IT_CORRIDOR",
+    "pcu_impact": 122.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 39.2,
+    "auto_pct": 2.7,
+    "heavy_pct": 4.1,
+    "spatial_lag_pcu": 4.5,
+    "validation_ratio_pct": 47.3,
+    "historical_violations": 5018,
+    "distance_to_cbd_km": 8.5,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.33) > threshold (1.2)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is IT_CORRIDOR (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (122.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.974395,
+    "lng": 77.553255,
+    "zone": "Magadi Road",
+    "archetype": "GENERAL",
+    "pcu_impact": 117.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 60.2,
+    "auto_pct": 18.1,
+    "heavy_pct": 3.6,
+    "spatial_lag_pcu": 181.0,
+    "validation_ratio_pct": 31.3,
+    "historical_violations": 8558,
+    "distance_to_cbd_km": 4.5,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (60.2%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (117.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.957919,
+    "lng": 77.705261,
+    "zone": "HAL Old Airport",
+    "archetype": "IT_CORRIDOR",
+    "pcu_impact": 79.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 37.4,
+    "auto_pct": 6.6,
+    "heavy_pct": 2.2,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 33.0,
+    "historical_violations": 20819,
+    "distance_to_cbd_km": 12.1,
+    "strategies": [
+      {
+        "name": "Activate Model Ward",
+        "source": "Vietnam (Hanoi)",
+        "action": "Zero-tolerance enforcement with full resource allocation",
+        "reason": "Historical violations (20,819) > threshold (15,000)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is IT_CORRIDOR (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (79.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Deploy 2 heavy-duty tow trucks; focus entirely on buses/HGVs first.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.943833,
+    "lng": 77.569963,
+    "zone": "Basavanagudi",
+    "archetype": "GENERAL",
+    "pcu_impact": 74.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 56.7,
+    "auto_pct": 4.8,
+    "heavy_pct": 1.0,
+    "spatial_lag_pcu": 96.1,
+    "validation_ratio_pct": 49.0,
+    "historical_violations": 3604,
+    "distance_to_cbd_km": 4.1,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (56.7%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (74.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.96848,
+    "lng": 77.645445,
+    "zone": "Jeevanbheemanagar",
+    "archetype": "GENERAL",
+    "pcu_impact": 71.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 28.9,
+    "auto_pct": 3.6,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 43.0,
+    "validation_ratio_pct": 57.8,
+    "historical_violations": 6736,
+    "distance_to_cbd_km": 5.5,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.48) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (71.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.949809,
+    "lng": 77.529571,
+    "zone": "Byatarayanapura",
+    "archetype": "GENERAL",
+    "pcu_impact": 70.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 63.7,
+    "auto_pct": 9.9,
+    "heavy_pct": 5.5,
+    "spatial_lag_pcu": 8.0,
+    "validation_ratio_pct": 30.8,
+    "historical_violations": 4555,
+    "distance_to_cbd_km": 7.5,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (63.7%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.23) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (70.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.908056,
+    "lng": 77.680059,
+    "zone": "Bellandur",
+    "archetype": "IT_CORRIDOR",
+    "pcu_impact": 67.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 30.0,
+    "auto_pct": 4.3,
+    "heavy_pct": 7.1,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 58.6,
+    "historical_violations": 4964,
+    "distance_to_cbd_km": 11.6,
+    "strategies": [
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is IT_CORRIDOR (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (67.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.970086,
+    "lng": 77.60928,
+    "zone": "Ashok Nagar",
+    "archetype": "GENERAL",
+    "pcu_impact": 66.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 46.5,
+    "auto_pct": 3.5,
+    "heavy_pct": 1.2,
+    "spatial_lag_pcu": 278.1,
+    "validation_ratio_pct": 17.4,
+    "historical_violations": 3524,
+    "distance_to_cbd_km": 1.6,
+    "strategies": [
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (66.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.954591,
+    "lng": 77.728817,
+    "zone": "Whitefield",
+    "archetype": "SUBURBAN_TECH",
+    "pcu_impact": 62.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 24.2,
+    "auto_pct": 3.0,
+    "heavy_pct": 6.1,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 16.7,
+    "historical_violations": 2303,
+    "distance_to_cbd_km": 14.7,
+    "strategies": [
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is SUBURBAN_TECH (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (62.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.912646,
+    "lng": 77.605249,
+    "zone": "Mico Layout",
+    "archetype": "GENERAL",
+    "pcu_impact": 55.0,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 75.3,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 22.7,
+    "validation_ratio_pct": 44.7,
+    "historical_violations": 2588,
+    "distance_to_cbd_km": 6.7,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (75.3%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.42) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (55.0) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 4
+  },
+  {
+    "lat": 12.846995,
+    "lng": 77.647887,
+    "zone": "Electronic City",
+    "archetype": "GENERAL",
+    "pcu_impact": 54.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 51.6,
+    "auto_pct": 3.1,
+    "heavy_pct": 18.8,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 28.1,
+    "historical_violations": 4333,
+    "distance_to_cbd_km": 15.0,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (51.6%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.52) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Time-Window Loading Restriction",
+        "source": "Indonesia/UK (Jakarta + London)",
+        "action": "Commercial vehicles allowed loading 6-8 AM only; enforce during peak",
+        "reason": "Heavy vehicle ratio (18.8%) > threshold (10%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (54.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 5
+  },
+  {
+    "lat": 12.927066,
+    "lng": 77.583198,
+    "zone": "Jayanagara",
+    "archetype": "GENERAL",
+    "pcu_impact": 51.5,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 26.7,
+    "auto_pct": 10.0,
+    "heavy_pct": 3.3,
+    "spatial_lag_pcu": 45.1,
+    "validation_ratio_pct": 35.0,
+    "historical_violations": 3813,
+    "distance_to_cbd_km": 5.1,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.52) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (51.5) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.975068,
+    "lng": 77.595199,
+    "zone": "Cubbon Park",
+    "archetype": "GENERAL",
+    "pcu_impact": 50.8,
+    "severity": "CRITICAL",
+    "color": "#FF1744",
+    "two_wheeler_pct": 50.7,
+    "auto_pct": 4.5,
+    "heavy_pct": 1.5,
+    "spatial_lag_pcu": 228.2,
+    "validation_ratio_pct": 41.8,
+    "historical_violations": 3255,
+    "distance_to_cbd_km": 0.4,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (50.7%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "High demand (~150+ slots needed). Create 3 rows of diagonal parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Deploy Tow Truck (PCU Priority)",
+        "source": "USA/Japan (SFpark + Tokyo)",
+        "action": "Prioritize: HGV (4.5) > Bus (3.5) > Maxi-Cab (1.5) > Car (1.0)",
+        "reason": "PCU impact (50.8) > threshold (50.0)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Deploy 1 tow truck; target highest PCU vehicles.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 13.045413,
+    "lng": 77.590398,
+    "zone": "Hebbala",
+    "archetype": "GENERAL",
+    "pcu_impact": 45.5,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 36.4,
+    "auto_pct": 7.3,
+    "heavy_pct": 3.6,
+    "spatial_lag_pcu": 77.5,
+    "validation_ratio_pct": 21.8,
+    "historical_violations": 3209,
+    "distance_to_cbd_km": 8.2,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.973134,
+    "lng": 77.624032,
+    "zone": "Halasur",
+    "archetype": "GENERAL",
+    "pcu_impact": 43.0,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 15.2,
+    "auto_pct": 17.4,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 256.6,
+    "validation_ratio_pct": 54.3,
+    "historical_violations": 4011,
+    "distance_to_cbd_km": 3.2,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.28) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.185548,
+    "lng": 77.673053,
+    "zone": "Chikkajala",
+    "archetype": "GENERAL",
+    "pcu_impact": 42.5,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 0.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 3.5,
+    "validation_ratio_pct": 19.5,
+    "historical_violations": 5834,
+    "distance_to_cbd_km": 25.3,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.945128,
+    "lng": 77.590156,
+    "zone": "Wilson Garden",
+    "archetype": "GENERAL",
+    "pcu_impact": 37.2,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 37.0,
+    "auto_pct": 6.5,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 113.5,
+    "validation_ratio_pct": 30.4,
+    "historical_violations": 3108,
+    "distance_to_cbd_km": 3.0,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.983704,
+    "lng": 77.580583,
+    "zone": "High ground",
+    "archetype": "GENERAL",
+    "pcu_impact": 35.5,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 7.3,
+    "auto_pct": 39.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 274.1,
+    "validation_ratio_pct": 75.6,
+    "historical_violations": 4951,
+    "distance_to_cbd_km": 2.0,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (39.0%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.988547,
+    "lng": 77.572893,
+    "zone": "Sheshadripuram",
+    "archetype": "GENERAL",
+    "pcu_impact": 34.0,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 22.5,
+    "auto_pct": 20.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 236.6,
+    "validation_ratio_pct": 47.5,
+    "historical_violations": 3090,
+    "distance_to_cbd_km": 3.0,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 13.000263,
+    "lng": 77.665877,
+    "zone": "Banaswadi",
+    "archetype": "GENERAL",
+    "pcu_impact": 32.8,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 41.2,
+    "auto_pct": 20.6,
+    "heavy_pct": 8.8,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 2.9,
+    "historical_violations": 3759,
+    "distance_to_cbd_km": 8.4,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.971579,
+    "lng": 77.571588,
+    "zone": "Chamarajpet",
+    "archetype": "GENERAL",
+    "pcu_impact": 30.8,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 15.8,
+    "auto_pct": 55.3,
+    "heavy_pct": 5.3,
+    "spatial_lag_pcu": 156.2,
+    "validation_ratio_pct": 28.9,
+    "historical_violations": 3795,
+    "distance_to_cbd_km": 2.5,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (55.3%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.36) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.996635,
+    "lng": 77.612235,
+    "zone": "Pulikeshinagar(F.Town)",
+    "archetype": "GENERAL",
+    "pcu_impact": 27.5,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 40.5,
+    "auto_pct": 32.4,
+    "heavy_pct": 2.7,
+    "spatial_lag_pcu": 298.9,
+    "validation_ratio_pct": 48.6,
+    "historical_violations": 4136,
+    "distance_to_cbd_km": 3.4,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (32.4%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.02657,
+    "lng": 77.575131,
+    "zone": "Sadashivanagar",
+    "archetype": "GENERAL",
+    "pcu_impact": 26.0,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 29.0,
+    "auto_pct": 6.5,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 192.8,
+    "validation_ratio_pct": 77.4,
+    "historical_violations": 1445,
+    "distance_to_cbd_km": 6.5,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.883201,
+    "lng": 77.554289,
+    "zone": "Thalagattapura",
+    "archetype": "GENERAL",
+    "pcu_impact": 25.8,
+    "severity": "HIGH",
+    "color": "#FF9100",
+    "two_wheeler_pct": 48.5,
+    "auto_pct": 3.0,
+    "heavy_pct": 3.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 48.5,
+    "historical_violations": 870,
+    "distance_to_cbd_km": 10.8,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.27) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.988925,
+    "lng": 77.501712,
+    "zone": "Kamakshipalya",
+    "archetype": "GENERAL",
+    "pcu_impact": 21.8,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 87.9,
+    "auto_pct": 3.0,
+    "heavy_pct": 3.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 6.1,
+    "historical_violations": 1431,
+    "distance_to_cbd_km": 10.2,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (87.9%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard demand (~30 slots). Single row parallel parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.933476,
+    "lng": 77.618541,
+    "zone": "Adugodi",
+    "archetype": "GENERAL",
+    "pcu_impact": 21.5,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 20.8,
+    "auto_pct": 25.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 29.8,
+    "validation_ratio_pct": 25.0,
+    "historical_violations": 3332,
+    "distance_to_cbd_km": 5.0,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.71) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.053857,
+    "lng": 77.536184,
+    "zone": "Jalahalli",
+    "archetype": "GENERAL",
+    "pcu_impact": 20.8,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 72.7,
+    "auto_pct": 3.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 19.8,
+    "validation_ratio_pct": 45.5,
+    "historical_violations": 1160,
+    "distance_to_cbd_km": 11.1,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (72.7%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard demand (~30 slots). Single row parallel parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.066201,
+    "lng": 77.640912,
+    "zone": "Hennuru",
+    "archetype": "GENERAL",
+    "pcu_impact": 19.8,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 19.0,
+    "auto_pct": 14.3,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 14.3,
+    "historical_violations": 892,
+    "distance_to_cbd_km": 11.7,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.23) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.028261,
+    "lng": 77.551043,
+    "zone": "Yeshwanthpura",
+    "archetype": "GENERAL",
+    "pcu_impact": 19.8,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 58.6,
+    "auto_pct": 10.3,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 183.9,
+    "validation_ratio_pct": 58.6,
+    "historical_violations": 2587,
+    "distance_to_cbd_km": 7.9,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (58.6%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard demand (~30 slots). Single row parallel parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.44) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.959435,
+    "lng": 77.574489,
+    "zone": "V.V.Puram (C.Pet)",
+    "archetype": "GENERAL",
+    "pcu_impact": 16.8,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 40.0,
+    "auto_pct": 35.0,
+    "heavy_pct": 10.0,
+    "spatial_lag_pcu": 163.2,
+    "validation_ratio_pct": 20.0,
+    "historical_violations": 1556,
+    "distance_to_cbd_km": 2.6,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (35.0%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 12.901662,
+    "lng": 77.588864,
+    "zone": "J.P. Nagar",
+    "archetype": "GENERAL",
+    "pcu_impact": 13.2,
+    "severity": "MODERATE",
+    "color": "#FFEA00",
+    "two_wheeler_pct": 33.3,
+    "auto_pct": 6.7,
+    "heavy_pct": 13.3,
+    "spatial_lag_pcu": 53.2,
+    "validation_ratio_pct": 33.3,
+    "historical_violations": 1637,
+    "distance_to_cbd_km": 7.8,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.41) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Time-Window Loading Restriction",
+        "source": "Indonesia/UK (Jakarta + London)",
+        "action": "Commercial vehicles allowed loading 6-8 AM only; enforce during peak",
+        "reason": "Heavy vehicle ratio (13.3%) > threshold (10%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.891915,
+    "lng": 77.633551,
+    "zone": "Hulimavu",
+    "archetype": "GENERAL",
+    "pcu_impact": 12.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 0.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 18.2,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 54.5,
+    "historical_violations": 2395,
+    "distance_to_cbd_km": 9.8,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.29) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Time-Window Loading Restriction",
+        "source": "Indonesia/UK (Jakarta + London)",
+        "action": "Commercial vehicles allowed loading 6-8 AM only; enforce during peak",
+        "reason": "Heavy vehicle ratio (18.2%) > threshold (10%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "This zone is the core pressure point. Interventions here will relieve neighbor zones."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 13.058639,
+    "lng": 77.490378,
+    "zone": "Chikkabanavara",
+    "archetype": "GENERAL",
+    "pcu_impact": 11.0,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 36.4,
+    "auto_pct": 0.0,
+    "heavy_pct": 9.1,
+    "spatial_lag_pcu": 8.0,
+    "validation_ratio_pct": 36.4,
+    "historical_violations": 785,
+    "distance_to_cbd_km": 14.9,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.965538,
+    "lng": 77.508152,
+    "zone": "Jnanabharathi",
+    "archetype": "GENERAL",
+    "pcu_impact": 8.0,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 54.5,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 70.8,
+    "validation_ratio_pct": 54.5,
+    "historical_violations": 1063,
+    "distance_to_cbd_km": 9.4,
+    "strategies": [
+      {
+        "name": "Designate Scooter Parking Zone",
+        "source": "Taiwan (Taipei)",
+        "action": "Install temporary signage + bollards for designated scooter area",
+        "reason": "Two-wheeler ratio (54.5%) > threshold (50%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard demand (~30 slots). Single row parallel parking.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.43) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 13.033838,
+    "lng": 77.516106,
+    "zone": "Peenya",
+    "archetype": "GENERAL",
+    "pcu_impact": 8.0,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 22.2,
+    "auto_pct": 22.2,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 11.0,
+    "validation_ratio_pct": 0.0,
+    "historical_violations": 974,
+    "distance_to_cbd_km": 11.0,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.927863,
+    "lng": 77.510796,
+    "zone": "Kengeri",
+    "archetype": "GENERAL",
+    "pcu_impact": 7.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 0.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 71.4,
+    "historical_violations": 464,
+    "distance_to_cbd_km": 10.3,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 12.898168,
+    "lng": 77.559138,
+    "zone": "K.S. Layout",
+    "archetype": "GENERAL",
+    "pcu_impact": 6.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 25.0,
+    "auto_pct": 25.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 62.5,
+    "historical_violations": 828,
+    "distance_to_cbd_km": 9.0,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.36) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.022428,
+    "lng": 77.617649,
+    "zone": "K.G. Halli",
+    "archetype": "GENERAL",
+    "pcu_impact": 4.8,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 20.0,
+    "auto_pct": 20.0,
+    "heavy_pct": 20.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 20.0,
+    "historical_violations": 892,
+    "distance_to_cbd_km": 6.2,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.55) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Time-Window Loading Restriction",
+        "source": "Indonesia/UK (Jakarta + London)",
+        "action": "Commercial vehicles allowed loading 6-8 AM only; enforce during peak",
+        "reason": "Heavy vehicle ratio (20.0%) > threshold (10%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 12.906782,
+    "lng": 77.62841,
+    "zone": "Madiwala",
+    "archetype": "TRANSIT_HUB",
+    "pcu_impact": 4.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 42.9,
+    "auto_pct": 57.1,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 66.3,
+    "validation_ratio_pct": 28.6,
+    "historical_violations": 1563,
+    "distance_to_cbd_km": 8.1,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (57.1%) > threshold (25%)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Focus within 200m radius of transit station entrances/exits.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.075598,
+    "lng": 77.585008,
+    "zone": "Yelahanka",
+    "archetype": "SUBURBAN_TECH",
+    "pcu_impact": 4.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 20.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 0.0,
+    "validation_ratio_pct": 0.0,
+    "historical_violations": 2440,
+    "distance_to_cbd_km": 11.6,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.29) > threshold (1.2)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Park-and-Ride Recommendation",
+        "source": "Indonesia (Jakarta Push-Pull)",
+        "action": "Variable message signs directing to P&R + increased metro feeder buses",
+        "reason": "Zone archetype is SUBURBAN_TECH (near transit/IT)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Utilize wide shoulder strips near tech park boundaries or transit feeder points.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Spatial pressure is balanced. Standalone intervention is sufficient."
+        }
+      }
+    ],
+    "strategy_count": 3
+  },
+  {
+    "lat": 13.204761,
+    "lng": 77.688853,
+    "zone": "Devanahalli Airport",
+    "archetype": "GENERAL",
+    "pcu_impact": 3.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 25.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 42.5,
+    "validation_ratio_pct": 0.0,
+    "historical_violations": 940,
+    "distance_to_cbd_km": 27.9,
+    "strategies": [
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 1
+  },
+  {
+    "lat": 13.012669,
+    "lng": 77.59252,
+    "zone": "R.T. Nagar",
+    "archetype": "GENERAL",
+    "pcu_impact": 3.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 0.0,
+    "auto_pct": 50.0,
+    "heavy_pct": 0.0,
+    "spatial_lag_pcu": 35.8,
+    "validation_ratio_pct": 25.0,
+    "historical_violations": 1736,
+    "distance_to_cbd_km": 4.6,
+    "strategies": [
+      {
+        "name": "Create Auto-Rickshaw Stand",
+        "source": "Thailand (Bangkok Win System)",
+        "action": "Mark designated auto stand with capacity limits",
+        "reason": "Auto/3-wheeler ratio (50.0%) > threshold (25%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Standard stand (5-10 autos capacity).",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Historical follow-through is low. Assign a senior officer (Inspector level) to supervise.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 2
+  },
+  {
+    "lat": 13.050342,
+    "lng": 77.4926,
+    "zone": "No Police Station",
+    "archetype": "GENERAL",
+    "pcu_impact": 1.5,
+    "severity": "LOW",
+    "color": "#00E676",
+    "two_wheeler_pct": 0.0,
+    "auto_pct": 0.0,
+    "heavy_pct": 100.0,
+    "spatial_lag_pcu": 227.6,
+    "validation_ratio_pct": 100.0,
+    "historical_violations": 339,
+    "distance_to_cbd_km": 14.1,
+    "strategies": [
+      {
+        "name": "Temporary Weekend Superblock",
+        "source": "Spain (Barcelona)",
+        "action": "Deploy barricades + redirect signage on Sat-Sun peak hours",
+        "reason": "Weekend + surge ratio (1.25) > threshold (1.2)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Time-Window Loading Restriction",
+        "source": "Indonesia/UK (Jakarta + London)",
+        "action": "Commercial vehicles allowed loading 6-8 AM only; enforce during peak",
+        "reason": "Heavy vehicle ratio (100.0%) > threshold (10%)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      },
+      {
+        "name": "Formalize as Designated Parking Zone",
+        "source": "Rwanda (Kigali)",
+        "action": "Survey, mark, and legitimize the area as paid parking",
+        "reason": "Persistence score (1.00) > threshold (0.8)",
+        "playbook": {
+          "location": "Deploy near primary commercial nodes or major junctions within the zone.",
+          "scale": "Scale intervention relative to observed peak volume.",
+          "timing": "Enforce strictly between 9:00 and 12:00 on Sundays.",
+          "personnel": "Standard deployment. Zone has good historical compliance record.",
+          "materials": "Chronic issue. Use permanent infrastructure (painted lines, concrete bollards, mounted signs).",
+          "coordination": "Neighboring zones have higher pressure. Expect spillover; alert adjacent traffic stations."
+        }
+      }
+    ],
+    "strategy_count": 3
+  }
+]

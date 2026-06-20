@@ -32,6 +32,8 @@ catboost_info/
 *.json
 
 # Exceptions for specific config/metadata small data files
+!heatmap_points.json
+!zone_markers.json
 !pois.json
 !knn_model_config.json
 !evaluation_results.json
