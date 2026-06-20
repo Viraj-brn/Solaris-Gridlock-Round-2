@@ -95,6 +95,11 @@ async def startup_event():
 async def serve_index():
     return FileResponse('frontend/dashboard.html')
 
+@app.head("/")
+async def health_check():
+    """Render uses HEAD requests for health checks."""
+    return JSONResponse(content=None, status_code=200)
+
 @app.get("/zone_markers.json")
 async def serve_zone_markers():
     return FileResponse('frontend/data/zone_markers.json')

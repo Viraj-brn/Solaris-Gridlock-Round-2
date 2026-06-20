@@ -44,6 +44,8 @@ catboost_info/
 !violations.csv
 !calendar_feature_weights.csv
 !model_feature_importance.csv
+!aggregated_zone_hourly.csv
+!cleaned_parking_data.csv
 
 # Ignore logs
 *.log
