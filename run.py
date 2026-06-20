@@ -84,7 +84,7 @@ def main():
             sys.exit(1)
             
         directives, allocation, profiles, strats = run_decision_engine(
-            aggregated, hours=[args.hour], day_of_week=args.day
+            aggregated, hour=args.hour, day_of_week=args.day
         )
         print("[OK] Decision engine execution complete.")
 
